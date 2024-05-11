@@ -1,0 +1,210 @@
+html {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    background-image: url("redes sociales/a539ecb9-2b81-4fb5-9573-c6efea6d497f.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* Center the background image */
+    background-size: cover;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#menu-container {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+}
+
+#menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+#menu li a {
+    margin-left: -60%;
+    color: white;
+    text-decoration: none;
+    padding: 0px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#menu li a:hover {
+
+    background-color: white;
+    color: black;
+}
+
+/* Estilos para el botón de menú en dispositivos pequeños */
+#menu-toggle {
+    display: none;
+    /* Oculta el botón de menú por defecto */
+}
+
+
+#menu-toggle+label:hover {
+    background-color: #555;
+}
+
+#logoheader {
+    width: 90px;
+    border-radius: 50%;
+    margin-right: 0px;
+}
+
+#menu-toggle:checked+label {
+    background-color: white;
+    color: black;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: Black;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+
+}
+
+/* Hacer que el contenedor del stream sea responsive */
+#twitch-embed {
+    width: 100%;
+    max-width: 800px;
+    /* Cambiar según sea necesario */
+    margin: 0 auto;
+}
+
+#fondoDePagina {
+    background-image: url("C:/Users/intxi/OneDrive/Imágenes/redes sociales/a539ecb9-2b81-4fb5-9573-c6efea6d497f.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+
+#redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    z-index: 2;
+    background-color: #555;
+    opacity: 0.9;
+
+}
+
+.logos {
+    width: 6vw;
+    /* Tamaño relativo al contenedor padre */
+    height: auto;
+    /* Altura automática para mantener la proporción */
+    margin-right: 8vw;
+    margin: 8vw;
+    /* Margen derecho relativo */
+    opacity: 2;
+}
+
+.logos:hover {
+    width: 6.2vw;
+    /* Tamaño relativo al contenedor padre */
+    max-width: 50px;
+    /* Tamaño máximo en píxeles */
+    height: auto;
+    /* Altura automática para mantener la proporción */
+    margin-right: 8vw;
+    margin: 8vw;
+    /* Margen derecho relativo */
+}
+
+
+
+#menu-toggle+label {
+
+    background-color: black;
+    color: black;
+
+
+}
+
+
+@media (max-width: 600px) {
+    html {
+        padding: 0;
+        margin: 0;
+        width: auto;
+    }
+
+    #menu {
+
+        display: none;
+        /* Oculta el menú por defecto en dispositivos pequeños */
+    }
+
+    #menu li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    #menu-toggle {
+
+        display: none;
+    }
+
+    #menu-toggle:checked+label+#menu {
+        margin-left: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        position: fixed;
+    }
+
+    /* Estilos para el menú desplegable */
+    #menu-toggle+label {
+
+        margin-left: auto;
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .logos {
+        width: 16vw;
+        /* Tamaño relativo al contenedor padre */
+        height: auto;
+        /* Altura automática para mantener la proporción */
+        margin-right: 2vw;
+        margin: 2vw;
+        /* Margen derecho relativo */
+    }
+}

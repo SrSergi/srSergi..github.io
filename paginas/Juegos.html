@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>srSergi</title>
+    <link rel="stylesheet" href="../srSergiCss.css" type="text/css">
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('../redes sociales/a539ecb9-2b81-4fb5-9573-c6efea6d497f.jpg');
+            /* Replace 'ruta/a/imagen-de-fondo.jpg' with your actual image path */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+
+        }
+
+        /* CSS para el footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* CSS para el div central */
+        #center-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            /* Ancho inicial */
+            max-width: 600px;
+            /* Ancho máximo */
+            margin: auto;
+            /* Centra horizontalmente */
+            height: 100%;
+            /* Ajusta la altura para que quepa todo en la pantalla */
+            overflow: auto;
+            /* Agrega barra de desplazamiento si es necesario */
+        }
+
+        /* CSS para el botón */
+        .download-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        #small-images {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #small-images img {
+            width: 50px;
+            /* Adjust the width of small images as needed */
+            height: auto;
+            margin: 0 5px;
+            /* Add some margin between small images */
+        }
+
+        /* Media query for smaller screens */
+        @media screen and (max-width: 768px) {
+            #center-div {
+                width: 95%;
+                /* Adjust the width for smaller screens */
+                height: auto;
+                /* Auto height for smaller screens */
+            }
+
+            .download-btn {
+                padding: 8px 16px;
+                /* Adjust padding for smaller screens */
+                font-size: 14px;
+                /* Adjust font size for smaller screens */
+            }
+
+            #small-images img {
+                width: 30px;
+                /* Adjust the width of small images for smaller screens */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+
+            /* Adjustments for smaller screens */
+            #center-div {
+                width: 100%;
+                /* Full width on smaller screens */
+                padding: 10px;
+                /* Adjust padding for smaller screens */
+                margin: 20px auto;
+                /* Center horizontally with some margin */
+                height: auto;
+                /* Auto height for smaller screens */
+            }
+
+            #small-images img {
+                width: 40px;
+                /* Adjust width of small images */
+                margin: 0 3px;
+                /* Adjust margin between small images */
+            }
+
+            .download-btn {
+                padding: 8px 16px;
+                /* Adjust padding for smaller screens */
+                font-size: 14px;
+                /* Adjust font size for smaller screens */
+            }
+        }
+
+        .card {
+            border-color: black;
+            border-width: 5px;
+            border-style: solid;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu-container" style="width:auto;">
+        <!-- Imagen del streamer a la izquierda -->
+        <img id="logoheader" src="../redes sociales/a539ecb9-2b81-4fb5-9573-c6efea6d497f.jpg" alt="Streamer">
+
+        <!-- Botón de menú para dispositivos pequeños -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle">&#9776;</label>
+
+        <!-- Opciones del menú -->
+        <ul id="menu">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="">Juegos</a></li>
+            <!-- Add more menu items here -->
+        </ul>
+
+    </div>
+    <br>
+    <br>
+    <div id="center-div" style="background-color:black;height:70vh;width: 80vw;">
+        <div class="card">
+            <img style="height:40vh;background-color:black;"
+                src="../redes sociales\a539ecb9-2b81-4fb5-9573-c6efea6d497f.jpg" alt="Main Image">
+
+            <div id="small-images">
+                <img style="min-width:5vw;min-height:7vh;margin-top:1.9vh;max-width:20vw;max-height:7vh"
+                    src="https://cdn.icon-icons.com/icons2/2235/PNG/512/windows_os_logo_icon_134674.png"
+                    alt="Small Image 1">
+                <button style="min-width:10vw;min-height:6vh;max-width:40vw;max-height:6vh;" class="download-btn"
+                    onclick="redirigirAGoogleDrive()">Windows</button>
+                <br>
+            </div>
+
+            <br>
+        </div>
+    </div>
+    <br><br>
+
+
+    <footer>
+        <p>© 2024 srSergi. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+<script>
+    function redirigirAGoogleDrive() {
+        // URL de Google Drive
+        var url = "https://drive.google.com/file/d/1QaNEiIaDcJqd6yTyfyN2jK7ok2Ry2i3z/view?usp=drive_link";
+        // Redirigir al usuario a Google Drive
+        window.location.href = url;
+    }
+</script>

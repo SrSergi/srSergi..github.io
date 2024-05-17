@@ -4,17 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>srSergi</title>
     <link rel="stylesheet" href="srSergiCss.css" type="text/css">
-
 
 </head>
 
 <body>
     <div id="menu-container">
         <!-- Imagen del streamer a la izquierda -->
-        <img id="logoheader" src="redes sociales\a539ecb9-2b81-4fb5-9573-c6efea6d497f.jpg" alt="Streamer">
+        <img id="logoheader" src="redes sociales/a539ecb9-2b81-4fb5-9573-c6efea6d497f.jpg" alt="Streamer">
 
         <!-- Botón de menú para dispositivos pequeños -->
         <input type="checkbox" id="menu-toggle">
@@ -28,7 +26,7 @@
         </ul>
     </div>
 
-    <section id="fondoDePagina" style="position: static;z-index:5">
+    <section id="fondoDePagina">
         <script>
             const twitchChannel = 'v'; // Twitch channel name
 
@@ -54,7 +52,6 @@
                 }
             }
 
-            // Call the function to get the stream title when the page loads
             window.onload = getStreamTitle;
         </script>
         <!-- Contenedor del stream -->
@@ -68,69 +65,61 @@
                 channel: "srSergi",
                 layout: "video",
                 autoplay: true,
-
             });
         </script>
     </section>
-    <br>
-    <br>
-    <br>
-    <section id="redes-sociales" style="position: static;height: autos;">
+
+    <section id="redes-sociales">
         <script>
-            // Definir las redes sociales de srSergi
             const redesSociales = {
                 twitch: "https://www.twitch.tv/srSergi",
                 instagram: "https://www.instagram.com/srsergitwitch?igsh=dmd3YzhgcTYzeG3",
-                discord: "https://discord.gg/GWHXNfeef7",
+                discord: "https://discord.gg/bc56m9qT",
                 youtube: "https://www.youtube.com/@SrSergi-twitch",
                 tiktok: "https://www.tiktok.com/@sergimahe?_t=8mEuoweJHRg&_r=1"
-                // Puedes añadir más redes sociales según sea necesario
             };
 
-            // Función para generar el HTML de las redes sociales
             function generarRedesSociales(redes) {
                 const divRedes = document.getElementById("redes-sociales");
-                // Iterar sobre las redes sociales y crear enlaces
                 for (let red in redes) {
                     if (redes.hasOwnProperty(red)) {
                         const enlace = document.createElement("a");
                         enlace.href = redes[red];
                         enlace.target = "_blank";
-                        // Seleccionar un icono adecuado según la red social
                         let icono = "";
                         switch (red) {
                             case "twitch":
-                                icono = "<img  src='redes sociales/logotwich.png' class='logos'>";
+                                icono = "<img src='redes sociales/logotwich.png' class='logos'>";
                                 break;
                             case "youtube":
-                                icono = "<img  src='redes sociales/logoyoutube.png' class='logos'>";
+                                icono = "<img src='redes sociales/logoyoutube.png' class='logos'>";
                                 break;
                             case "instagram":
-                                icono = "<img  src='redes sociales/loginsta.png' class='logos'>";
+                                icono = "<img src='redes sociales/loginsta.png' class='logos'>";
                                 break;
                             case "discord":
-                                icono = "<img  src='redes sociales/logoDiscord.png' class='logos'>";
+                                icono = "<img src='redes sociales/logoDiscord.png' class='logos'>";
                                 break;
                             case "tiktok":
-                                icono = "<img  src='redes sociales/logotiktok.png' class='logos'>";
+                                icono = "<img src='redes sociales/logotiktok.png' class='logos'>";
                                 break;
                         }
-                        enlace.innerHTML = icono; // Aquí podrías usar un icono de imagen o fuente
-                        enlace.classList.add("social-icon"); // Clase opcional para estilizar los iconos
+                        enlace.innerHTML = icono;
+                        enlace.classList.add("social-icon");
                         divRedes.appendChild(enlace);
                     }
                 }
             }
 
-            // Llamar a la función para generar las redes sociales
             generarRedesSociales(redesSociales);
         </script>
-
     </section>
 
     <footer>
         <p>© 2024 srSergi. Todos los derechos reservados.</p>
     </footer>
+
+
 </body>
 
 </html>

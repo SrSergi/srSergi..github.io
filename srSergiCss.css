@@ -3,10 +3,10 @@ html {
     margin: 0;
     width: auto;
     background-image: url("redes sociales/a539ecb9-2b81-4fb5-9573-c6efea6d497f.jpg");
-    background-repeat: no-repeat;
     background-position: center center;
     /* Center the background image */
     background-size: cover;
+
 }
 
 body {
@@ -116,26 +116,27 @@ footer {
     align-items: center;
     height: 25vh;
     z-index: 2;
-    background-color: #555;
+    background-color: #ece4e4;
     opacity: 0.9;
+
 
 }
 
 .logos {
-    width: 6vw;
+    width: 10vw;
     /* Tamaño relativo al contenedor padre */
     height: auto;
     /* Altura automática para mantener la proporción */
-    margin-right: 8vw;
-    margin: 8vw;
+    margin-right: 0vw;
+    margin: 0vw;
     /* Margen derecho relativo */
     opacity: 2;
 }
 
 .logos:hover {
-    width: 6.2vw;
+    width: 8vw;
     /* Tamaño relativo al contenedor padre */
-    max-width: 50px;
+
     /* Tamaño máximo en píxeles */
     height: auto;
     /* Altura automática para mantener la proporción */
@@ -206,5 +207,9 @@ footer {
         margin-right: 2vw;
         margin: 2vw;
         /* Margen derecho relativo */
+    }
+
+    .social-icon {
+        background-attachment: red;
     }
 }

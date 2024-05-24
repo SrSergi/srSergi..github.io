@@ -7,6 +7,13 @@
     <title>srSergi</title>
     <link rel="stylesheet" href="srSergiCss.css" type="text/css">
 
+
+    <!--
+    <link rel="stylesheet" href="css/pcss.css">
+    <link rel="stylesheet" href="css/menuboton.css">
+    <link rel="stylesheet" href="css/mm.css">
+    <link rel="stylesheet" href="css/footer.css">-->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
@@ -74,7 +81,7 @@
             const redesSociales = {
                 twitch: "https://www.twitch.tv/srSergi",
                 instagram: "https://www.instagram.com/srsergitwitch?igsh=dmd3YzhgcTYzeG3",
-                discord: "https://discord.gg/bc56m9qT",
+                discord: "https://discord.com/invite/NUkXCdEf8T",
                 youtube: "https://www.youtube.com/@SrSergi-twitch",
                 tiktok: "https://www.tiktok.com/@sergimahe?_t=8mEuoweJHRg&_r=1"
             };
@@ -98,7 +105,7 @@
                                 icono = "<img src='redes sociales/loginsta.png' class='logos'>";
                                 break;
                             case "discord":
-                                icono = "<img src='redes sociales/logoDiscord.png' class='logos'>";
+                                icono = "<img src='redes sociales/logoDiscord.111111111111111png' class='logos'>";
                                 break;
                             case "tiktok":
                                 icono = "<img src='redes sociales/logotiktok.png' class='logos'>";
@@ -115,9 +122,45 @@
         </script>
     </section>
 
-    <footer>
-        <p>© 2024 srSergi. Todos los derechos reservados.</p>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text" style="min-width:50vw;">
+                <p>
+                    <script type="text/javascript">
+
+                        copyright = new Date();
+
+                        update = copyright.getFullYear();
+
+                        document.write("©" + update + " " + "Todos los derechos reservados");
+
+                    </script>
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="aviso-cookies" id="aviso-cookies">
+            <img class="galleta" src="./img/cookie.svg" alt="Galleta">
+            <h3 class="titulo cookistext">Cookies</h3>
+            <p class="parrafo cookistext">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.</p>
+            <button class="boton" id="btn-aceptar-cookies">De acuerdo</button>
+            <a class="enlace" href="aviso-cookies.html" style="color:rgb(61, 142, 248);">Aviso de Cookies</a>
+        </div>
+        <div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
+
+        <script src="js/aviso-cookies.js"></script>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
 
 
 </body>

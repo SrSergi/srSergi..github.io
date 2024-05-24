@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../srSergiCss.css" type="text/css">
+    <title>Recetas de Cocina</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('../redes sociales/a539ecb9-2b81-4fb5-9573-c6efea6d497f.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Estilos generales */
+        .detalle {
+            background-color: black;
+            padding: 10px;
+            color: #ccc;
+            border: 1px solid #ccc;
+            max-width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            z-index: 1000;
+            display: none;
+        }
+
+        .detalle.mostrar {
+            display: block;
+        }
+
+        .detalle.nomostrar {
+            display: none;
+        }
+
+        .contenedor-cartas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            width: auto;
+            margin-left: 5%;
+        }
+
+        .carta {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            color: white;
+            transition: transform 0.3s;
+            background-color: black;
+            max-width: 320px;
+            width: 100%;
+            margin-left: 1%;
+        }
+
+        .carta:hover {
+            transform: scale(1.05);
+        }
+
+        .carta img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Media Queries */
+        @media screen and (min-width: 768px) {
+            .contenedor-cartas {
+                padding: 40px;
+            }
+
+            .carta {
+                max-width: 350px;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .contenedor-cartas {
+                justify-content: flex-start;
+            }
+        }
+
+        @media screen and (max-width: 1780px) {
+            .contenedor-cartas {
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .carta {
+                margin-left: -1%;
+            }
+        }
+
+        @media screen and (max-width: 1643px) {
+            .contenedor-cartas {
+                justify-content: flex-start;
+                align-items: center;
+                max-width: 1360px;
+                margin-left: 5%;
+            }
+
+            .carta {
+                margin-left: 5%;
+
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="menu-container" style="width:auto;">
+        <!-- Imagen del streamer a la izquierda -->
+        <img id="logoheader" src="../redes sociales/a539ecb9-2b81-4fb5-9573-c6efea6d497f.jpg" alt="Streamer">
+
+        <!-- Botón de menú para dispositivos pequeños -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle">&#9776;</label>
+
+        <!-- Opciones del menú -->
+        <ul id="menu">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="">Juegos</a></li>
+            <!-- Add more menu items here -->
+        </ul>
+    </div>
+
+
+
+    <div class="contenedor-cartas">
+        <div class="carta" onclick="toggleDetalles('receta1')">
+            <img src="../redes sociales/logoyoutube.png" alt="Imagen de Spaghetti Carbonara">
+            <h2>Spaghetti Carbonara</h2>
+        </div>
+
+        <div class="detalle divescroll" id="receta1">
+            <img src="../redes sociales/logoyoutube.png" style="max-height: 200px;" alt="Imagen de Spaghetti Carbonara">
+            <p>Ingredientes:</p>
+            <ul>
+                <li>Spaghetti</li>
+                <li>Huevos</li>
+                <li>Panceta o tocino</li>
+                <li>Queso parmesano</li>
+                <li>Pimienta negra</li>
+                <li>Sal</li>
+            </ul>
+            <p>Elaboración:</p>
+            <ol>
+                <li>Cocinar el spaghetti en agua con sal hasta que esté al dente.</li>
+                <li>Freír la panceta o tocino hasta que esté crujiente.</li>
+                <li>Batir los huevos con queso parmesano rallado y pimienta negra.</li>
+                <li>Escurrir el spaghetti y agregar a la sartén con la panceta.</li>
+                <li>Retirar la sartén del fuego y agregar la mezcla de huevo y queso, revolviendo rápidamente para
+                    que el huevo se cocine con el calor residual.</li>
+                <li>Servir inmediatamente.</li>
+
+
+
+            </ol>
+            <button onclick="cerrardiv('receta1')"
+                style="font-size:0.7em;background-color:rgb(64, 120, 241);color: #000000;height:30px;width:120px;">Cerrar</button>
+        </div>
+
+        <div class="carta " onclick="toggleDetalles('receta2')">
+            <img src="../redes sociales/logoyoutube.png" alt="Imagen de Ensalada César">
+            <h2>Ensalada César</h2>
+
+        </div>
+        <div class="detalle divescroll" id="receta2">
+            <p>Ingredientes:</p>
+            <ul>
+                <li>Lechuga romana</li>
+                <li>Pollo asado o a la parrilla</li>
+                <li>Pan tostado o crutones</li>
+                <li>Queso parmesano</li>
+                <li>Salsa César</li>
+                <li>Sal</li>
+                <li>Pimienta negra</li>
+            </ul>
+            <p>Elaboración:</p>
+            <ol>
+                <li>Lavar y cortar la lechuga romana en trozos.</li>
+                <li>Cortar el pollo en tiras o cubos.</li>
+                <li>Mezclar la lechuga con el pollo, los crutones y el queso parmesano.</li>
+                <li>Agregar la salsa César y mezclar bien.</li>
+                <li>Servir frío.</li>
+
+
+            </ol>
+        </div>
+
+        <div class="carta" onclick="toggleDetalles('receta1')">
+            <img src="../redes sociales/logoyoutube.png" alt="Imagen de Spaghetti Carbonara">
+            <h2>Spaghetti Carbonara</h2>
+            <div class="detalle" id="receta1">
+                <p>Ingredientes:</p>
+                <ul>
+                    <li>Spaghetti</li>
+                    <li>Huevos</li>
+                    <li>Panceta o tocino</li>
+                    <li>Queso parmesano</li>
+                    <li>Pimienta negra</li>
+                    <li>Sal</li>
+                </ul>
+                <p>Elaboración:</p>
+                <ol>
+                    <li>Cocinar el spaghetti en agua con sal hasta que esté al dente.</li>
+                    <li>Freír la panceta o tocino hasta que esté crujiente.</li>
+                    <li>Batir los huevos con queso parmesano rallado y pimienta negra.</li>
+                    <li>Escurrir el spaghetti y agregar a la sartén con la panceta.</li>
+                    <li>Retirar la sartén del fuego y agregar la mezcla de huevo y queso, revolviendo rápidamente para
+                        que el huevo se cocine con el calor residual.</li>
+                    <li>Servir inmediatamente.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="carta" onclick="toggleDetalles('receta1')">
+            <img src="../redes sociales/logoyoutube.png" alt="Imagen de Spaghetti Carbonara">
+            <h2>Spaghetti Carbonara</h2>
+            <div class="detalle" id="receta1">
+                <p>Ingredientes:</p>
+                <ul>
+                    <li>Spaghetti</li>
+                    <li>Huevos</li>
+                    <li>Panceta o tocino</li>
+                    <li>Queso parmesano</li>
+                    <li>Pimienta negra</li>
+                    <li>Sal</li>
+                </ul>
+                <p>Elaboración:</p>
+                <ol>
+                    <li>Cocinar el spaghetti en agua con sal hasta que esté al dente.</li>
+                    <li>Freír la panceta o tocino hasta que esté crujiente.</li>
+                    <li>Batir los huevos con queso parmesano rallado y pimienta negra.</li>
+                    <li>Escurrir el spaghetti y agregar a la sartén con la panceta.</li>
+                    <li>Retirar la sartén del fuego y agregar la mezcla de huevo y queso, revolviendo rápidamente para
+                        que el huevo se cocine con el calor residual.</li>
+                    <li>Servir inmediatamente.</li>
+                </ol>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="contenedor-cartas">
+        <div class="carta" onclick="toggleDetalles('receta1')">
+            <img src="../redes sociales/logoyoutube.png" alt="Imagen de Spaghetti Carbonara">
+            <h2>Spaghetti Carbonara</h2>
+            <div class="detalle" id="receta1">
+                <p>Ingredientes:</p>
+                <ul>
+                    <li>Spaghetti</li>
+                    <li>Huevos</li>
+                    <li>Panceta o tocino</li>
+                    <li>Queso parmesano</li>
+                    <li>Pimienta negra</li>
+                    <li>Sal</li>
+                </ul>
+                <p>Elaboración:</p>
+                <ol>
+                    <li>Cocinar el spaghetti en agua con sal hasta que esté al dente.</li>
+                    <li>Freír la panceta o tocino hasta que esté crujiente.</li>
+                    <li>Batir los huevos con queso parmesano rallado y pimienta negra.</li>
+                    <li>Escurrir el spaghetti y agregar a la sartén con la panceta.</li>
+                    <li>Retirar la sartén del fuego y agregar la mezcla de huevo y queso, revolviendo rápidamente para
+                        que el huevo se cocine con el calor residual.</li>
+                    <li>Servir inmediatamente.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="carta" onclick="toggleDetalles('receta2')">
+            <img src="../redes sociales/logoyoutube.png" alt="Imagen de Ensalada César">
+            <h2>Ensalada César</h2>
+            <div class="detalle" id="receta2">
+                <p>Ingredientes:</p>
+                <ul>
+                    <li>Lechuga romana</li>
+                    <li>Pollo asado o a la parrilla</li>
+                    <li>Pan tostado o crutones</li>
+                    <li>Queso parmesano</li>
+                    <li>Salsa César</li>
+                    <li>Sal</li>
+                    <li>Pimienta negra</li>
+                </ul>
+                <p>Elaboración:</p>
+                <ol>
+                    <li>Lavar y cortar la lechuga romana en trozos.</li>
+                    <li>Cortar el pollo en tiras o cubos.</li>
+                    <li>Mezclar la lechuga con el pollo, los crutones y el queso parmesano.</li>
+                    <li>Agregar la salsa César y mezclar bien.</li>
+                    <li>Servir frío.</li>
+                </ol>
+            </div>
+        </div>
+
+
+        <div class="carta" onclick="toggleDetalles('receta1')">
+            <img src="../redes sociales/logoyoutube.png" alt="Imagen de Spaghetti Carbonara">
+            <h2>Spaghetti Carbonara</h2>
+            <div class="detalle" id="receta1">
+                <p>Ingredientes:</p>
+                <ul>
+                    <li>Spaghetti</li>
+                    <li>Huevos</li>
+                    <li>Panceta o tocino</li>
+                    <li>Queso parmesano</li>
+                    <li>Pimienta negra</li>
+                    <li>Sal</li>
+                </ul>
+                <p>Elaboración:</p>
+                <ol>
+                    <li>Cocinar el spaghetti en agua con sal hasta que esté al dente.</li>
+                    <li>Freír la panceta o tocino hasta que esté crujiente.</li>
+                    <li>Batir los huevos con queso parmesano rallado y pimienta negra.</li>
+                    <li>Escurrir el spaghetti y agregar a la sartén con la panceta.</li>
+                    <li>Retirar la sartén del fuego y agregar la mezcla de huevo y queso, revolviendo rápidamente para
+                        que el huevo se cocine con el calor residual.</li>
+                    <li>Servir inmediatamente.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="carta" onclick="toggleDetalles('receta1')">
+            <img src="../redes sociales/logoyoutube.png" alt="Imagen de Spaghetti Carbonara">
+            <h2>Spaghetti Carbonara</h2>
+            <div class="detalle" id="receta1">
+                <p>Ingredientes:</p>
+                <ul>
+                    <li>Spaghetti</li>
+                    <li>Huevos</li>
+                    <li>Panceta o tocino</li>
+                    <li>Queso parmesano</li>
+                    <li>Pimienta negra</li>
+                    <li>Sal</li>
+                </ul>
+                <p>Elaboración:</p>
+                <ol>
+                    <li>Cocinar el spaghetti en agua con sal hasta que esté al dente.</li>
+                    <li>Freír la panceta o tocino hasta que esté crujiente.</li>
+                    <li>Batir los huevos con queso parmesano rallado y pimienta negra.</li>
+                    <li>Escurrir el spaghetti y agregar a la sartén con la panceta.</li>
+                    <li>Retirar la sartén del fuego y agregar la mezcla de huevo y queso, revolviendo rápidamente para
+                        que el huevo se cocine con el calor residual.</li>
+                    <li>Servir inmediatamente.</li>
+                </ol>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <footer>
+        <p>© 2024 srSergi. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function toggleDetalles(id) {
+            var detalles = document.getElementsByClassName('detalle');
+            for (var i = 0; i < detalles.length; i++) {
+                detalles[i].classList.remove('mostrar');
+            }
+            document.getElementById(id).classList.toggle('mostrar');
+        }
+        function cerrardiv(id) {
+            document.getElementById(id).classList.remove('mostrar');
+
+        }
+    </script>
+</body>
+
+</html>
